@@ -2,10 +2,17 @@
 
 import { useState, useEffect } from "react";
 
+type TimeLeft = {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
+
 function CountDown({text}: {text:string}) {
   const calculateTimeLeft = () => {
     const now = new Date();
-    const weddingDate = new Date("2026-06-21T17:30:00");
+    const weddingDate = new Date("2026-06-21T17:30:00+03:00");
     const difference = weddingDate.getTime() - now.getTime();
 
     if (difference > 0) {
@@ -20,26 +27,24 @@ function CountDown({text}: {text:string}) {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   };
 
-  const [mounted, setMounted] = useState(false);
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {
-    setMounted(true);
-    setTimeLeft(calculateTimeLeft());
+    const frame = window.requestAnimationFrame(() => {
+      setTimeLeft(calculateTimeLeft());
+    });
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      clearInterval(timer);
+    };
   }, []);
 
-  if (!mounted) {
+  if (!timeLeft) {
     return (
       <div className="w-[90%] h-fit flex flex-row items-center justify-between text-center font-primary text-entry-text opacity-0">
         <div className="w-16 h-16 rounded-full" />
