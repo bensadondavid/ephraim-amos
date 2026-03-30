@@ -1,13 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --text: #504B39;
+  --arche: #E3D7C6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-text: var(--text);
+  --color-arche: var(--arche)
+  --font-primary: var(--font-libre-baskerville);
+  --font-name: var(--font-authenia);
+  --font-title: var(--font-manhattan);
+  --font-bsd: var(--font-bsd)
 }
 
+.musique button{
+    height: 40px;
+    width: 40px;
+    border : 2px #BBA787 solid;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    z-index: 10;
+    padding: 5px;
+}
 
+.musique svg{
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+}

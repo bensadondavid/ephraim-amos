@@ -1,15 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Libre_Baskerville } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const libre_baskerville = Libre_Baskerville({
+  variable: "--font-libre-baskerville",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const authenia = localFont({
+  src: "/fonts/Authenia.woff2",
+  weight: "400",
+  style: "normal",
+  variable: "--font-authenia",
+  display: "swap",
+});
+
+const manhattan = localFont({
+  src: "/fonts/manhattan.woff2",
+  weight: "400",
+  style: "normal",
+  variable: "--font-manhattan",
+  display: "swap",
+});
+
+const shlomo_stam = localFont({
+  src: "/fonts/ShlomoStam.woff2",
+  weight: "400",
+  style: "normal",
+  variable: "--font-shlomo-stam",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +43,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html className={`${libre_baskerville.variable} ${authenia.variable} ${manhattan.variable} ${shlomo_stam.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col relative">
+        <p className="absolute top-4 right-4 text-entry-text font-bsd">בס"ד</p>
+        {children}
+      </body>
     </html>
   );
 }
