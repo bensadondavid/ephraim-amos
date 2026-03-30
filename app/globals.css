@@ -7,11 +7,11 @@
 
 @theme inline {
   --color-text: var(--text);
-  --color-arche: var(--arche)
+  --color-arche: var(--arche);
   --font-primary: var(--font-libre-baskerville);
   --font-name: var(--font-authenia);
   --font-title: var(--font-manhattan);
-  --font-bsd: var(--font-bsd)
+  --font-bsd: var(--font-shlomo-stam)
 }
 
 .musique button{

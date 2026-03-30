@@ -9,7 +9,7 @@ const libre_baskerville = Libre_Baskerville({
 });
 
 const authenia = localFont({
-  src: "/fonts/Authenia.woff2",
+  src: "./fonts/Authenia.woff2",
   weight: "400",
   style: "normal",
   variable: "--font-authenia",
@@ -17,7 +17,7 @@ const authenia = localFont({
 });
 
 const manhattan = localFont({
-  src: "/fonts/manhattan.woff2",
+  src: "./fonts/manhattan.woff2",
   weight: "400",
   style: "normal",
   variable: "--font-manhattan",
@@ -25,7 +25,7 @@ const manhattan = localFont({
 });
 
 const shlomo_stam = localFont({
-  src: "/fonts/ShlomoStam.woff2",
+  src: "./fonts/ShlomoStam.woff2",
   weight: "400",
   style: "normal",
   variable: "--font-shlomo-stam",
