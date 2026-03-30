@@ -12,7 +12,7 @@ type TimeLeft = {
 function CountDown({text}: {text:string}) {
   const calculateTimeLeft = () => {
     const now = new Date();
-    const weddingDate = new Date("2026-06-21T17:30:00+03:00");
+    const weddingDate = new Date("2026-04-27T08:30:00+03:00");
     const difference = weddingDate.getTime() - now.getTime();
 
     if (difference > 0) {

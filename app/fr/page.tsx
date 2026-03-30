@@ -9,7 +9,7 @@ export default function Entry() {
 
     <div className="w-screen h-screen bg-[url('/fond-ephraim.png')] bg-repeat bg-cover flex flex-col justify-around items-center relative z-20">
         <p className="absolute top-4 right-4 text-text font-bsd">בס"ד</p>
-        <Image src={'/logo-ephraim.png'} alt="Logo Sarah" width={200} height={200} />
+        <Image src={'/logo-ephraim.png'} alt="Logo Sarah" width={200} height={200} loading="eager"/>
         <p className="text-white font-bsd text-2xl">בר מצווה</p>
         <p className="text-text font-name text-[60px]">Ephraim Shimon</p>
         <CountDown text={'flex-row'}/>

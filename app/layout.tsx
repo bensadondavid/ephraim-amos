@@ -16,11 +16,11 @@ const authenia = localFont({
   display: "swap",
 });
 
-const manhattan = localFont({
-  src: "./fonts/manhattan.woff2",
+const le_jour_serif = localFont({
+  src: "./fonts/le_jour_serif.woff2",
   weight: "400",
   style: "normal",
-  variable: "--font-manhattan",
+  variable: "--font-le-jour-serif",
   display: "swap",
 });
 
@@ -43,9 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${libre_baskerville.variable} ${authenia.variable} ${manhattan.variable} ${shlomo_stam.variable} h-full antialiased`}>
+    <html className={`${libre_baskerville.variable} ${authenia.variable} ${le_jour_serif.variable} ${shlomo_stam.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col relative">
-        <p className="absolute top-4 right-4 text-entry-text font-bsd">בס"ד</p>
+        <p className="absolute top-4 right-4 text-text font-bsd">בס"ד</p>
         {children}
       </body>
     </html>
