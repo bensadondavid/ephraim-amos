@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function HebrewHomePage() {
   return (
-    <div className="w-screen h-fit bg-[url('/fond-ephraim.png')] pt-12">
+    <div className="w-screen h-fit bg-[url('/fond-ephraim.png')] bg-repeat-y bg-[length:100%_auto] pt-12">
       <TefsHb />
       <SoireeHb />
       <ResponseHb />
