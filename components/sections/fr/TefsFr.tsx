@@ -7,7 +7,7 @@ import TefsSvg from "@/app/svg/tefsSvg"
 export default function TefsFr() {
 
   return(
-    <div className="w-full h-fit rounded-t-[50%_180px] bg-[url('/fond-ephraim.png')] flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary shadow-[0_-10px_20px_rgba(0,0,0,0.40)]">
+    <div className="w-full h-fit rounded-t-[50%_180px] bg-transparent flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary shadow-[0_-10px_20px_rgba(0,0,0,0.40)]">
       <div className="flex flex-col justify-center items-center translate-y-8">
         <TefsSvg />
         <Image src={"/logo-ephraim.png"} alt="logo" width={50} height={50} className="-translate-y-12" />
