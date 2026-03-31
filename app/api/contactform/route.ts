@@ -1,12 +1,20 @@
 import { NextResponse } from "next/server"
 
 export async function POST(req: Request) {
-  
   const url = process.env.APPSCRIPT_URL
 
   try {
     const body = await req.json()
-    const { lastname, firstname, presence, tefs, soiree, number, message } = body
+
+    const lastname = body.lastname?.trim()
+    const firstname = body.firstname?.trim()
+    const presence = body.presence
+
+    const tefs = body.tefs === true || body.tefs === "true"
+    const soiree = body.soiree === true || body.soiree === "true"
+
+    const message = typeof body.message === "string" ? body.message.trim() : ""
+    const rawNumber = body.number
 
     if (!url) {
       return NextResponse.json(
@@ -29,18 +37,26 @@ export async function POST(req: Request) {
       )
     }
 
+    let number = ""
+
     if (presence === "assisteront") {
-      const n = Number(number)
+      const n = Number(rawNumber)
+
       if (!Number.isInteger(n) || n < 1) {
         return NextResponse.json(
           { message: "Nombre invalide" },
           { status: 400 }
         )
       }
-    }
 
-    if(presence === "assisteront" && !soiree && !tefs){
-      return NextResponse.json({message : 'aucun evenement sélectioné'}, {status: 400})
+      number = String(n)
+
+      if (!tefs && !soiree) {
+        return NextResponse.json(
+          { message: "Aucun événement sélectionné" },
+          { status: 400 }
+        )
+      }
     }
 
     const response = await fetch(url, {
@@ -53,7 +69,7 @@ export async function POST(req: Request) {
         tefs,
         soiree,
         number,
-        message: message ?? "",
+        message,
       }),
     })
 
@@ -62,8 +78,12 @@ export async function POST(req: Request) {
     try {
       data = await response.json()
     } catch {
+      const text = await response.text()
       return NextResponse.json(
-        { message: "Réponse invalide du script" },
+        {
+          message: "Réponse invalide du script",
+          detail: text,
+        },
         { status: 502 }
       )
     }
