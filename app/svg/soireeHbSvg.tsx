@@ -13,7 +13,7 @@ export default function SoireeHbSvg() {
       />
       <text
         fill="currentColor"
-        className="font-title text-[25px] tracking-[-0.08em]"
+        className="font-bsd text-[25px] tracking-[-0.08em]"
         direction="rtl"
         unicodeBidi="bidi-override"
       >

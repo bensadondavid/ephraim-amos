@@ -18,8 +18,8 @@ export default function SoireeFr() {
       <p className="text-lg font-bold">Lundi 27 avril 2026 <br />À 19:15</p>
       <p className="text-lg font-bold">À la grande synagogue de Jérusalem<br />King George St 56 <br />Jérusalem</p>
       <div className="flex flex-col gap-3 pt-3">
-        <Waze name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" lat="" long="" text="Itinéraire Waze" />
-        <SaveTheDate name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" date={[2026, 4, 27, 8, 30]} text="Ajouter au calendrier" />
+        <Waze name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" lat="31.776232" long="35.216980" text="Itinéraire Waze" />
+        <SaveTheDate name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" date={[2026, 4, 27, 19, 15]} text="Ajouter au calendrier" />
       </div>
     </div>
 

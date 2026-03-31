@@ -7,7 +7,7 @@ export default function TefsHb() {
   return (
     <div
       dir="rtl"
-      className="w-full h-fit rounded-t-[50%_180px] bg-transparent flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary shadow-[0_-10px_20px_rgba(0,0,0,0.40)]"
+      className="w-full h-fit rounded-t-[50%_180px] bg-transparent flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary shadow-[0_-10px_20px_-12px_rgba(0,0,0,0.60)]"
     >
       <div className="flex flex-col justify-center items-center translate-y-8">
         <TefsHbSvg />
@@ -19,7 +19,7 @@ export default function TefsHb() {
       </div>
       <p className="w-[90%]">מר וגברת מאיר ואסתי עמוס</p>
       <p className="w-[90%]">שמחים להזמינכם לבר המצווה של בנם ונכדם</p>
-      <p className="text-text font-name text-[60px]">אפרים שמעון</p>
+      <p className="text-text font-bsd text-[40px]">אפרים שמעון</p>
       <p className="w-[90%]">נשמח מאוד שתצטרפו אלינו לרגע המיוחד והמרגש הזה</p>
       <p className="w-[90%]">ונכבד את נוכחותכם בהנחת התפילין שתתקיים בעז&quot;ה</p>
       <p className="text-lg font-bold">
@@ -37,7 +37,7 @@ export default function TefsHb() {
         שנוכחת בליבנו לעד&quot;
       </p>
       <div className="flex flex-col gap-3 pt-3">
-        <Waze name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" lat="" long="" text="ניווט ב-Waze" />
+        <Waze name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" lat="31.775555" long="35.233749" text="ניווט ב-Waze" />
         <SaveTheDate
           name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full"
           date={[2026, 4, 27, 8, 30]}

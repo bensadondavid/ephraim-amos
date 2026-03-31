@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Libre_Baskerville } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Musique from "@/components/ui/Musique";
 
 const libre_baskerville = Libre_Baskerville({
   variable: "--font-libre-baskerville",
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col relative">
         <p className="absolute top-4 right-4 text-text font-bsd">בס"ד</p>
         {children}
+        <Musique />
       </body>
     </html>
   );

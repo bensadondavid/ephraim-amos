@@ -3,11 +3,13 @@
 :root {
   --text: #504B39;
   --arche: #E3D7C6;
+  --form: #F5ECE3;
 }
 
 @theme inline {
   --color-text: var(--text);
   --color-arche: var(--arche);
+  --color-form: var(--form);
   --font-primary: var(--font-libre-baskerville);
   --font-name: var(--font-authenia);
   --font-title: var(--font-le-jour-serif);

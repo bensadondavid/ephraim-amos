@@ -89,12 +89,12 @@ const FormFr = () => {
   return (
 
     <form 
-        className="flex flex-col gap-3 justify-center h-full w-full font-primary text-home-text md:w-[30%] md:flex md:flex-col"
+        className="flex flex-col gap-3 justify-center h-full w-full font-primary text-text"
         onSubmit={handleSubmit}
         >
         <motion.label initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} className="flex flex-col w-[90%] gap-2 ml-5">Nom* : <br />
             <input
-                className="bg-white rounded-full px-8 py-2 border border-home-text" 
+                className="bg-form rounded-full px-8 py-2 border border-none" 
                 type="text"
                 name="lastname"
                 value={formData.lastname}
@@ -104,7 +104,7 @@ const FormFr = () => {
         </motion.label>
         <motion.label initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} className="flex flex-col w-[90%] gap-2 ml-5">Prénom* :<br />
             <input 
-                className="bg-white rounded-full px-8 py-2 border border-home-text" 
+                className="bg-form rounded-full px-8 py-2 border border-none" 
                 type="text"
                 name="firstname"
                 value={formData.firstname}
@@ -112,9 +112,9 @@ const FormFr = () => {
                 required
             />
         </motion.label> 
-        <label className="flex items-center gap-2 mt-3 ml-5">
+        <label className="flex items-center gap-3 mt-3 ml-5">
             <input 
-                className="appearance-none w-3 h-3 bg-white rounded-full border border-home-text checked:bg-home-text"
+                className="sr-only"
                 type="radio" 
                 name="presence"
                 value={'assisteront'}
@@ -122,21 +122,64 @@ const FormFr = () => {
                 onChange={handleChange}
                 required
             />
+        <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full border border-text bg-white transition-colors">
+            <span className={`h-1.5 w-1.5 rounded-full bg-text transition-opacity ${formData.presence === 'assisteront' ? 'opacity-100' : 'opacity-0'}`} />
+        </span>
         Assisteront</label>
        {
        formData.presence === 'assisteront' ?
        <>
-       <label>
-            <input type="checkbox" name="tefs" checked={formData.tefs} onChange={handleChange} className='square-checkbox'/>
-            Mise des Tephillins
-            </label>
-            <label>
-            <input type="checkbox" name="soiree" checked={formData.soiree} onChange={handleChange} className='square-checkbox'/>
-            Réception
-            </label>
-        <label className="flex flex-col w-[90%] gap-2 ml-5">Nombre* :<br />
+       <label className="flex items-center gap-3 ml-7">
+            <input
+                type="checkbox"
+                name="tefs"
+                checked={formData.tefs}
+                onChange={handleChange}
+                className="sr-only"
+            />
+            <span className={`flex h-3 w-3 items-center justify-center rounded-full border border-text transition-colors ${formData.tefs ? 'bg-text' : 'bg-white'}`}>
+                <svg
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                    className={`h-1.5 w-1.5 transition-opacity ${formData.tefs ? 'text-white opacity-100' : 'text-text opacity-0'}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <path d="m3.5 8 3 3 6-6" />
+                </svg>
+            </span>
+            <span>Mise des Tephillins</span>
+        </label>
+        <label className="flex items-center gap-3 ml-7">
+            <input
+                type="checkbox"
+                name="soiree"
+                checked={formData.soiree}
+                onChange={handleChange}
+                className="sr-only"
+            />
+            <span className={`flex h-3 w-3 items-center justify-center rounded-full border border-text transition-colors ${formData.soiree ? 'bg-text' : 'bg-white'}`}>
+                <svg
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                    className={`h-1.5 w-1.5 transition-opacity ${formData.soiree ? 'text-white opacity-100' : 'text-text opacity-0'}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <path d="m3.5 8 3 3 6-6" />
+                </svg>
+            </span>
+            <span>Réception</span>
+        </label>
+        <label className="flex flex-col w-[80%] gap-2 ml-7 mb-5">Nombre* :<br />
             <input 
-            className="bg-white rounded-full px-8 py-2 border border-home-text" 
+            className="bg-form rounded-full px-8 py-2 border border-none" 
             type="number" 
             name="number" 
             value={formData.number} 
@@ -151,22 +194,25 @@ const FormFr = () => {
         :
         null
         }
-        <label className="flex items-center gap-2 mb-4 ml-5">
+        <label className="flex items-center gap-3 mb-4 ml-5">
             <input 
-                className="appearance-none w-3 h-3 bg-white rounded-full border border-home-text checked:bg-home-text"
+                className="sr-only"
                 type="radio" 
                 name="presence"
                 value={"n'assisteront pas"}
                 checked={formData.presence === "n'assisteront pas"}
                 onChange={handleChange}
             />
+        <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full border border-text bg-white transition-colors">
+            <span className={`h-1.5 w-1.5 rounded-full bg-text transition-opacity ${formData.presence === "n'assisteront pas" ? 'opacity-100' : 'opacity-0'}`} />
+        </span>
         N'assisteront pas</label>
-        <label className="flex flex-col w-[90%] gap-2 ml-5">Un message pour les mariés :<br />
-            <textarea className="bg-white rounded-3xl px-9 py-2 border border-home-text"  name="message" value={formData.message} onChange={handleChange}></textarea>
+        <label className="flex flex-col w-[90%] gap-2 ml-5">Message :<br />
+            <textarea className="bg-form rounded-3xl px-9 py-2 border-none"  name="message" value={formData.message} onChange={handleChange}></textarea>
         </label>
        <motion.button 
         initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-[180px] h-[40px] bg-entry-text text-white mx-auto py-1 rounded-full mt-5 flex items-center justify-center"
+        className="w-[160px] h-[40px] bg-form text-text mx-auto py-1 rounded-full mt-5 flex items-center justify-center"
         type="submit"
         disabled={loading}
         >
@@ -177,7 +223,7 @@ const FormFr = () => {
                 speed="0.9"
                 color="#EFCBD5" 
             />
-            : 'ENVOYER'
+            : 'Envoyer'
         }
         </motion.button>
     </form>

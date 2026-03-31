@@ -14,7 +14,7 @@ export default function SoireeHb() {
         <Image src={"/logo-ephraim.png"} alt="logo" width={50} height={50} className="-translate-y-12" />
       </div>
       <p className="w-[90%]">מר וגברת מאיר ואסתי עמוס</p>
-      <p className="text-text font-name text-[60px]">אפרים שמעון</p>
+      <p className="text-text font-bsd text-[40px]">אפרים שמעון</p>
       <p className="w-[90%]">
         בשמחה ובהתרגשות הננו מזמינים אתכם לחגוג עמנו את האירוע המיוחד
         <br />
@@ -35,7 +35,7 @@ export default function SoireeHb() {
         ירושלים
       </p>
       <div className="flex flex-col gap-3 pt-3">
-        <Waze name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" lat="" long="" text="ניווט ב-Waze" />
+        <Waze name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" lat="31.776232" long="35.216980" text="Waze" />
         <SaveTheDate
           name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full"
           date={[2026, 4, 27, 19, 15]}
