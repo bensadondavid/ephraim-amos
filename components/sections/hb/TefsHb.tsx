@@ -16,7 +16,7 @@ export default function TefsHb() {
       </div>
       <p className="w-[90%]">מר וגברת מאיר ואסתי עמוס</p>
       <p className="w-[90%]">שמחים להזמינכם לבר המצווה של בנם ונכדם</p>
-      <p className="text-text font-hebrew-title font-bold text-[40px]">אפרים שמעון</p>
+      <p className="text-text font-hebrew-title font-bold text-[40px] flex flex-row gap-8"><span>אפרים</span><span>שמעון</span></p>
       <p className="w-[90%]">נשמח מאוד שתצטרפו אלינו לרגע המיוחד והמרגש הזה</p>
       <p className="w-[90%]">ונכבד את נוכחותכם בהנחת התפילין שתתקיים בעז&quot;ה</p>
       <p className="text-lg font-bold">

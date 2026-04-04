@@ -10,7 +10,7 @@ export default function SoireeHb() {
         <Image src={"/logo-ephraim.png"} alt="logo" width={100} height={100} />
       </div>
       <p className="w-[90%] pt-2">מר וגברת מאיר ואסתי עמוס</p>
-      <p className="text-text font-hebrew-title font-bold text-[40px]">אפרים שמעון</p>
+      <p className="text-text font-hebrew-title font-bold text-[40px] flex flex-row gap-8"><span>אפרים</span><span>שמעון</span></p>
       <p className="w-[90%]">
         בשמחה ובהתרגשות הננו מזמינים אתכם לחגוג עמנו את האירוע המיוחד
         <br />
