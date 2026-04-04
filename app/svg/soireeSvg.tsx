@@ -15,7 +15,7 @@ export default function SoireeSvg() {
       />
       <text
         fill="currentColor"
-        className="font-title text-[30px] tracking-[-0.08em]"
+        className="font-primary text-[30px] tracking-[-0.08em]"
       >
         <textPath href="#tefilins-curve" startOffset="50%" textAnchor="middle">
           RÉCEPTION

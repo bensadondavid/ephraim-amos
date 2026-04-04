@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville } from "next/font/google";
+import { Libre_Baskerville, Frank_Ruhl_Libre, David_Libre } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Musique from "@/components/ui/Musique";
@@ -7,6 +7,18 @@ import Musique from "@/components/ui/Musique";
 const libre_baskerville = Libre_Baskerville({
   variable: "--font-libre-baskerville",
   subsets: ["latin"],
+});
+
+const frank_ruhl_libre = Frank_Ruhl_Libre({
+  variable: "--font-franck-ruhl-libre",
+  subsets: ["latin", "hebrew"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"]
+});
+
+const david_libre = David_Libre({
+  variable: "--font-david-libre",
+  subsets: ["latin", "hebrew"],
+  weight:"400"
 });
 
 const authenia = localFont({
@@ -17,13 +29,6 @@ const authenia = localFont({
   display: "swap",
 });
 
-const le_jour_serif = localFont({
-  src: "./fonts/le_jour_serif.woff2",
-  weight: "400",
-  style: "normal",
-  variable: "--font-le-jour-serif",
-  display: "swap",
-});
 
 const shlomo_stam = localFont({
   src: "./fonts/ShlomoStam.woff2",
@@ -44,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${libre_baskerville.variable} ${authenia.variable} ${le_jour_serif.variable} ${shlomo_stam.variable} h-full antialiased`}>
+    <html className={`${libre_baskerville.variable} ${authenia.variable} ${frank_ruhl_libre.variable} ${david_libre.variable} ${shlomo_stam.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col relative">
         <p className="absolute top-4 right-4 text-text font-bsd">בס"ד</p>
         {children}

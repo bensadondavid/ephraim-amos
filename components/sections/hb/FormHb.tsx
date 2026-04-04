@@ -86,7 +86,7 @@ const FormHb = () => {
   return (
     <form
       dir="rtl"
-      className="flex flex-col gap-3 justify-center h-full w-full font-primary text-text"
+      className="flex flex-col gap-3 justify-center h-full w-full font-hebrew-text text-text text-lg"
       onSubmit={handleSubmit}
     >
       <motion.label

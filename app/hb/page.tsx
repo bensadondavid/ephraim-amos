@@ -11,7 +11,7 @@ export default function EntryHb() {
       <p className="text-white font-bsd text-2xl">בר מצווה</p>
       <p className="text-text font-name text-[60px]">Ephraim Shimon</p>
       <CountDown text="flex-row-reverse" />
-      <p className="text-text font-primary text-center italic text-[10px] w-9/10 my-4">
+      <p className="text-text font-hebrew-text text-center italic text-sm w-9/10 my-4">
         ברוך ה׳
         <br />
         בהודיה עמוקה לה׳ יתברך, זכינו לשמחה הגדולה לחגוג את בר המצווה של בננו היקר,

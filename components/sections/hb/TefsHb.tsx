@@ -4,19 +4,19 @@ import Image from "next/image"
 
 export default function TefsHb() {
   return (
-    <div
-      dir="rtl"
-      className="w-full h-fit rounded-t-[50%_180px] bg-transparent flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary shadow-[0_-10px_20px_-12px_rgba(0,0,0,0.60)] relative">
+    <div dir="rtl" className="w-full h-fit rounded-t-[50%_180px] bg-transparent flex flex-col justify-center items-center gap-6 pb-16 text-center text-lg text-text font-hebrew-text shadow-[0_-10px_20px_-12px_rgba(0,0,0,0.60)] relative">
       <Image src={'/img-tefilins.png'} alt="tefs" width={200} height={200} className="absolute top-[35%] left-[25%] opacity-20" />
-      <p className="text-text text-xl font-bsd pt-12">הנחת תפילין</p>
-      <Image src={"/logo-ephraim.png"} alt="logo" width={50} height={50} />
-      <div className="w-[90%] flex flex-row justify-between items-center text-[10px]">
+      <div className="flex flex-col justify-center items-center translate-y-8 pb-9">
+        <p className="text-text text-2xl font-hebrew-title pt-12">הנחת תפילין</p>
+        <Image src={"/logo-ephraim.png"} alt="logo" width={100} height={100} />
+      </div>
+      <div className="w-[90%] flex flex-row justify-between items-center text-sm">
         <p>מר וגברת הרב דוד עמוס</p>
         <p>מר יעקב גיא ללוש</p>
       </div>
       <p className="w-[90%]">מר וגברת מאיר ואסתי עמוס</p>
       <p className="w-[90%]">שמחים להזמינכם לבר המצווה של בנם ונכדם</p>
-      <p className="text-text font-bsd text-[40px]">אפרים שמעון</p>
+      <p className="text-text font-hebrew-title font-bold text-[40px]">אפרים שמעון</p>
       <p className="w-[90%]">נשמח מאוד שתצטרפו אלינו לרגע המיוחד והמרגש הזה</p>
       <p className="w-[90%]">ונכבד את נוכחותכם בהנחת התפילין שתתקיים בעז&quot;ה</p>
       <p className="text-lg font-bold">
@@ -29,7 +29,7 @@ export default function TefsHb() {
         ברחבת הכותל המערבי
       </p>
       <p className="w-[90%]">• כיבוד קל יוגש בתום התפילה •</p>
-      <p className="w-[90%] italic">
+      <p className="w-[90%] italic text-sm">
         &quot;ביום מרגש זה, מחשבותינו עולות באהבה ובגעגוע אל סבתא יעל ללוש ז&quot;ל,
         שנוכחת בליבנו לעד&quot;
       </p>

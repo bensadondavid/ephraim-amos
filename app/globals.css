@@ -12,8 +12,9 @@
   --color-form: var(--form);
   --font-primary: var(--font-libre-baskerville);
   --font-name: var(--font-authenia);
-  --font-title: var(--font-libre-baskerville);
-  --font-bsd: var(--font-shlomo-stam)
+  --font-bsd: var(--font-shlomo-stam);
+  --font-hebrew-title : var(--font-franck-ruhl-libre);
+  --font-hebrew-text: var(--font-david-libre);
 }
 
 .musique button{
