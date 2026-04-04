@@ -7,10 +7,11 @@ import TefsSvg from "@/app/svg/tefsSvg"
 export default function TefsFr() {
 
   return(
-    <div className="w-full h-fit rounded-t-[50%_180px] bg-transparent flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary shadow-[0_-10px_20px_-12px_rgba(0,0,0,0.60)]">
-      <div className="flex flex-col justify-center items-center translate-y-8">
+    <div className="w-full h-fit rounded-t-[50%_180px] bg-transparent flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary shadow-[0_-10px_20px_-12px_rgba(0,0,0,0.60)] relative">
+      <Image src={'/img-tefilins.png'} alt="tefs" width={200} height={200} className="absolute top-[35%] left-[25%] opacity-20" />
+      <div className="flex flex-col justify-center items-center translate-y-8 gap-2">
         <TefsSvg />
-        <Image src={"/logo-ephraim.png"} alt="logo" width={50} height={50} className="-translate-y-12" />
+        <Image src={"/logo-ephraim.png"} alt="logo" width={100} height={100} className="-translate-y-12" />
       </div>
       <div className="w-[90%] flex flex-row justify-between items-center text-[10px]">
         <p>Mr & Mme Rav David Amos</p>
@@ -23,7 +24,7 @@ export default function TefsFr() {
       <p className="w-[90%]">Nous serions honorés de votre présence à la mise de tephilins qui aura lieu b"h</p>
       <p className="text-lg font-bold">Lundi 27 avril 2026 <br />À 8:30 <br />Au Kotel</p>
       <p className="w-[90%]">• Un petit déjeuner sera servi à l'issue de l'office •</p>
-      <p className="w-[90%] italic">"En ce jour si précieux, nos pensées s'élèvent avec tendresse vers ma grand-mère Mme Yael Lellouche Zal, présente à jamais dans nos coeurs"</p>
+      <p className="w-[90%] italic">"En ce jour si précieux, nos pensées s'élèvent avec tendresse vers ma grand-mère Mme Yaëlle Lellouche Zal, présente à jamais dans nos coeurs"</p>
       <div className="flex flex-col gap-3 pt-3">
         <Waze name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" lat="31.775555" long="35.233749" text="Itinéraire Waze" />
         <SaveTheDate name="w-[160px] h-[40px] bg-[#FDF8F0] rounded-full" date={[2026, 4, 27, 8, 30]} text="Ajouter au calendrier" />

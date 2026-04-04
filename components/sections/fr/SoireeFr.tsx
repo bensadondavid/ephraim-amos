@@ -8,9 +8,9 @@ export default function SoireeFr() {
   return(
     
     <div className="w-full h-fit rounded-t-[50%_180px] rounded-b-[50%_180px] bg-[#E3D7C6] flex flex-col justify-center items-center gap-6 pb-16 text-center text-xs text-text font-primary">
-      <div className="flex flex-col justify-center items-center translate-y-8">
+      <div className="flex flex-col justify-center items-center translate-y-8 gap-2">
         <SoireeSvg />
-        <Image src={"/logo-ephraim.png"} alt="logo" width={50} height={50} className="-translate-y-12" />
+        <Image src={"/logo-ephraim.png"} alt="logo" width={100} height={100} className="-translate-y-12" />
       </div>
       <p className="w-[90%]">Mr & Mme Méir et Esthy Amos</p>
       <p className="text-text font-name text-[60px]">Ephraim Shimon</p>
