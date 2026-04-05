@@ -2,6 +2,7 @@
 import CountDown from "@/components/ui/CountDown";
 import Image from "next/image";
 import Link from "next/link";
+import LanguageBtn from "@/components/ui/LanguageBtn";
 
 export default function EntryHb() {
   return (
@@ -11,7 +12,8 @@ export default function EntryHb() {
       <p className="text-white font-bsd text-2xl">בר מצווה</p>
       <p className="text-text font-hebrew-title font-bold text-[50px] flex flex-row gap-5"><span>אפרים</span><span>שמעון</span></p>
       <CountDown text="flex-row-reverse" />
-      <p className="text-text font-hebrew-text text-center italic text-sm w-9/10 my-4">
+      <LanguageBtn />
+      <p className="text-text font-hebrew-text text-center italic text-sm w-9/10 mb-4">
         ברוך ה׳
         <br />
         בהודיה עמוקה לה׳ יתברך, זכינו לשמחה הגדולה לחגוג את בר המצווה של בננו היקר,

@@ -2,6 +2,7 @@
 import CountDown from "@/components/ui/CountDown"
 import Image from "next/image"
 import Link from "next/link"
+import LanguageBtn from "@/components/ui/LanguageBtn"
 
 export default function Entry() {
 
@@ -13,7 +14,8 @@ export default function Entry() {
         <p className="text-white font-bsd text-2xl">בר מצווה</p>
         <p className="text-text font-name text-[60px]">Ephraim Shimon</p>
         <CountDown text={'flex-row'}/>
-        <p className="text-text font-primary text-center italic text-[10px] w-9/10 my-4">
+        <LanguageBtn />
+        <p className="text-text font-primary text-center italic text-[10px] w-9/10 mb-4">
             ברוך ה׳ <br />
             Animés d’une profonde gratitude envers notre créateur, nous avons le mérite et la grande joie 
             de célébrer la bar mitsvah de notre cher fils ,
