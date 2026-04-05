@@ -15,7 +15,7 @@ export default function Entry() {
         <CountDown text={'flex-row'}/>
         <p className="text-text font-primary text-center italic text-[10px] w-9/10 my-4">
             ברוך ה׳ <br />
-            Animés d’une profonde gratitude , nous avons le mérite et la grande joie 
+            Animés d’une profonde gratitude envers notre créateur, nous avons le mérite et la grande joie 
             de célébrer la bar mitsvah de notre cher fils ,
             entourés de ceux qui nous sont chers 
         </p>

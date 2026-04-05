@@ -9,7 +9,7 @@ export default function EntryHb() {
       <p className="absolute top-4 right-4 text-text font-bsd">בס"ד</p>
       <Image src="/logo-ephraim.png" alt="Logo Ephraim" width={200} height={200} loading="eager"/>
       <p className="text-white font-bsd text-2xl">בר מצווה</p>
-      <p className="text-text font-name text-[60px]">Ephraim Shimon</p>
+      <p className="text-text font-hebrew-title font-bold text-[50px] flex flex-row gap-5"><span>אפרים</span><span>שמעון</span></p>
       <CountDown text="flex-row-reverse" />
       <p className="text-text font-hebrew-text text-center italic text-sm w-9/10 my-4">
         ברוך ה׳
