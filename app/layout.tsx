@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo-wts.png",
-        width: 300,
-        height: 300,
+        width: 800,
+        height: 800,
       },
     ],
   },
