@@ -41,6 +41,18 @@ const shlomo_stam = localFont({
 export const metadata: Metadata = {
   title: "Bar Mitsvah Ephraim Amos",
   description: "Bar Mitsvah Ephraim Amos",
+  metadataBase: new URL("https://ephraim-amos-six.vercel.app"),
+  openGraph: {
+    title: "Bar Mitsvah Ephraim Amos",
+    description: "Bar Mitsvah Ephraim Amos",
+    images: [
+      {
+        url: "/logo-ephraim.png",
+        width: 500,
+        height: 500,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
