@@ -43,14 +43,14 @@ export const metadata: Metadata = {
   description: "Bar Mitsvah Ephraim Amos",
   metadataBase: new URL("https://ephraim-amos-six.vercel.app"),
   icons: {
-    icon: '/logo-wts.png'
+    icon: "/logo-wts.png",
   },
   openGraph: {
     title: "Bar Mitsvah Ephraim Amos",
     description: "Bar Mitsvah Ephraim Amos",
     images: [
       {
-        url: "/logo-wts.png",
+        url: "/logo-ephraim-wts.png",
         width: 800,
         height: 800,
       },
