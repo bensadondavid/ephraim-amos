@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo-ephraim-wts.png",
-        width: 64,
-        height: 64,
+        width: 250,
+        height: 250,
       },
     ],
   },
