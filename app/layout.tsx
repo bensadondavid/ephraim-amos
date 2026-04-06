@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     description: "Bar Mitsvah Ephraim Amos",
     images: [
       {
-        url: "/logo-ephraim.png",
-        width: 500,
-        height: 500,
+        url: "/logo-wts.png",
+        width: 64,
+        height: 64,
       },
     ],
   },
